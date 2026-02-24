@@ -26,7 +26,10 @@ interface GenericResponse {
 @Injectable({ providedIn: 'root' })
 export class BootService {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = 'http://localhost:4000/api/v1/boots';
+  private readonly apiUrl =
+    typeof window !== 'undefined' && window.location.hostname === 'localhost'
+      ? 'http://localhost:4000/api/v1/boots'
+      : '/api/v1/boots';
 
   private normalizeBoot(boot: Boot): Boot {
     const normalizedPrice = Number((boot as any).price ?? (boot as any).precio ?? 0);
