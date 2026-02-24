@@ -200,18 +200,39 @@ npm run dev
 ---
 
 ## 12) URLs de despliegue (rellenar cuando publiques)
-- URL API desplegada: `PENDIENTE`
-- URL Frontend Angular desplegado: `PENDIENTE`
-- URL Frontend React desplegado: `PENDIENTE`
+- URL API desplegada: `PENDIENTE`  
+  Ejemplo: `https://api-botas.onrender.com`
+- URL Frontend Angular desplegado: `PENDIENTE`  
+  Ejemplo: `https://tienda-botas-angular.netlify.app`
+- URL Frontend React desplegado: `PENDIENTE`  
+  Ejemplo: `https://tienda-botas-react.netlify.app`
 
 ---
 
 ## 13) Capturas de pantalla
-Añadir en esta sección las capturas de:
-- Listado en Angular.
-- Formulario en Angular.
-- Detalle en Angular.
-- Listado en React.
-- Formulario en React.
-- Detalle en React.
-- Pruebas Postman de CRUD y paginación.
+Guarda las imágenes en la carpeta `capturas/` del repositorio y referencia aquí:
+
+### Angular
+![Listado Angular](capturas/angular-listado.png)
+![Formulario Angular](capturas/angular-formulario.png)
+![Detalle Angular](capturas/angular-detalle.png)
+
+### React
+![Listado React](capturas/react-listado.png)
+![Formulario React](capturas/react-formulario.png)
+![Detalle React](capturas/react-detalle.png)
+
+### Postman
+![CRUD Postman](capturas/postman-crud.png)
+![Paginación Postman](capturas/postman-paginacion.png)
+
+---
+
+## 14) Checklist de entrega final
+- [x] Descripción del proyecto
+- [x] Reglas de negocio
+- [x] Endpoints documentados
+- [ ] URL de la API desplegada
+- [ ] URL del frontend Angular desplegado
+- [ ] URL del frontend React desplegado
+- [ ] Capturas de pantalla añadidas
