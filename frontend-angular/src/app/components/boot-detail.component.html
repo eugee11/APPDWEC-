@@ -1,0 +1,27 @@
+<a class="btn btn-outline-secondary mb-3" routerLink="/">← Volver</a>
+
+<div *ngIf="loading" class="loader-box d-flex align-items-center justify-content-center">
+  <div class="spinner-border" role="status"></div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+<div *ngIf="boot" class="card">
+  <div class="card-header bg-dark text-white">Detalle de la bota</div>
+  <div class="card-body row g-3">
+    <div class="col-md-6"><strong>Modelo:</strong> {{ boot.name }}</div>
+    <div class="col-md-6"><strong>Marca:</strong> {{ boot.brand }}</div>
+    <div class="col-md-6"><strong>Color:</strong> {{ boot.color }}</div>
+    <div class="col-md-6"><strong>Talla:</strong> {{ boot.size }}</div>
+    <div class="col-md-6"><strong>Precio:</strong> {{ boot.price | currency : 'EUR' : 'symbol' : '1.2-2' : 'es-ES' }}</div>
+    <div class="col-md-6"><strong>Superficie:</strong> {{ getSurfaceLabel(boot.surface) }}</div>
+    <div class="col-md-6"><strong>Stock:</strong> {{ boot.stock }}</div>
+    <div class="col-md-6"><strong>Disponible:</strong> {{ boot.inStock ? 'Sí' : 'No' }}</div>
+    <div class="col-12"><strong>Descripción:</strong> {{ boot.description }}</div>
+    <div class="col-md-6"><strong>Lanzamiento:</strong> {{ boot.releaseDate | date : 'dd/MM/yyyy' }}</div>
+  </div>
+  <div class="card-footer d-flex gap-2">
+    <a class="btn btn-warning" [routerLink]="['/boots/edit', boot._id]">Editar</a>
+    <a class="btn btn-secondary" routerLink="/">Listado</a>
+  </div>
+</div>

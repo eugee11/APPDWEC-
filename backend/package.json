@@ -1,0 +1,21 @@
+{
+  "name": "backend-botas-futbol",
+  "version": "1.0.0",
+  "description": "API REST para tienda de botas de fútbol",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "seed": "node src/seed/seedBoots.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb-memory-server": "^10.1.4",
+    "mongoose": "^8.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

@@ -1,0 +1,86 @@
+<a class="btn btn-outline-secondary mb-3" routerLink="/">← Volver</a>
+
+<div class="card">
+  <div class="card-header bg-dark text-white">{{ isEditMode ? 'Editar bota' : 'Nueva bota' }}</div>
+  <div class="card-body">
+    <div *ngIf="loading" class="loader-box d-flex align-items-center justify-content-center">
+      <div class="spinner-border" role="status"></div>
+    </div>
+
+    <div *ngIf="!loading">
+      <div *ngIf="alertMessage" class="alert" [ngClass]="'alert-' + alertType">
+        {{ alertMessage }}
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Modelo</label>
+          <input type="text" formControlName="name" class="form-control" />
+          <small class="text-danger" *ngIf="hasError('name', 'required')">Campo obligatorio</small>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Marca</label>
+          <input type="text" formControlName="brand" class="form-control" />
+          <small class="text-danger" *ngIf="hasError('brand', 'required')">Campo obligatorio</small>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Color</label>
+          <input type="text" formControlName="color" class="form-control" />
+          <small class="text-danger" *ngIf="hasError('color', 'required')">Campo obligatorio</small>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Talla</label>
+          <input type="number" formControlName="size" class="form-control" />
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Superficie</label>
+          <select formControlName="surface" class="form-select">
+            <option value="FG">Césped natural (FG)</option>
+            <option value="AG">Césped artificial (AG)</option>
+            <option value="TF">Turf / Moqueta (TF)</option>
+            <option value="IC">Interior / Sala (IC)</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Precio (€)</label>
+          <input type="number" formControlName="price" class="form-control" />
+          <small class="text-danger" *ngIf="hasError('price', 'min')">Mínimo 30€</small>
+          <small class="text-danger" *ngIf="hasError('price', 'max')">Máximo 500€</small>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Stock</label>
+          <input type="number" formControlName="stock" class="form-control" />
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Lanzamiento</label>
+          <input type="date" formControlName="releaseDate" class="form-control" />
+        </div>
+
+        <div class="col-12">
+          <label class="form-label">Descripción</label>
+          <textarea class="form-control" rows="3" formControlName="description"></textarea>
+          <small class="text-danger" *ngIf="hasError('description', 'minlength')">Mínimo 10 caracteres</small>
+        </div>
+
+        <div class="col-12 form-check ms-2">
+          <input type="checkbox" class="form-check-input" id="inStock" formControlName="inStock" />
+          <label class="form-check-label" for="inStock">Disponible en stock</label>
+        </div>
+
+        <div class="col-12 d-flex gap-2">
+          <button class="btn btn-primary" type="submit" [disabled]="submitting">
+            {{ submitting ? 'Guardando...' : 'Guardar' }}
+          </button>
+          <a class="btn btn-secondary" routerLink="/">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

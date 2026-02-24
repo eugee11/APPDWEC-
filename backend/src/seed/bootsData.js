@@ -1,0 +1,25 @@
+const bootsData = [
+  { name: 'Mercurial Vapor 16 Elite', brand: 'Nike', color: 'Volt', description: 'Bota de velocidad con ajuste ceñido y respuesta explosiva en carrera.', price: 279.99, releaseDate: '2024-08-01', inStock: true, stock: 8, size: 41, surface: 'FG' },
+  { name: 'Mercurial Superfly 10 Elite', brand: 'Nike', color: 'Rosa', description: 'Modelo de velocidad con tobillo tipo calcetín para cambios de ritmo.', price: 299.99, releaseDate: '2024-07-15', inStock: true, stock: 5, size: 42, surface: 'FG' },
+  { name: 'Phantom GX 2 Elite', brand: 'Nike', color: 'Azul', description: 'Bota de control y golpeo con textura adherente para pases precisos.', price: 289.99, releaseDate: '2024-02-20', inStock: true, stock: 7, size: 43, surface: 'AG' },
+  { name: 'Tiempo Legend 10 Elite', brand: 'Nike', color: 'Blanco', description: 'Comodidad premium y tacto clásico con materiales modernos ligeros.', price: 269.99, releaseDate: '2023-08-14', inStock: true, stock: 6, size: 42, surface: 'FG' },
+  { name: 'Predator Elite', brand: 'Adidas', color: 'Negro', description: 'Botín de precisión para golpeo y control en zonas de finalización.', price: 279.99, releaseDate: '2024-01-11', inStock: true, stock: 9, size: 41, surface: 'FG' },
+  { name: 'F50 Elite', brand: 'Adidas', color: 'Naranja', description: 'Regreso de un clásico orientado a máxima aceleración y ligereza.', price: 269.99, releaseDate: '2024-06-06', inStock: true, stock: 12, size: 40, surface: 'FG' },
+  { name: 'Copa Pure 2 Elite', brand: 'Adidas', color: 'Blanco', description: 'Sensación de piel y ajuste anatómico para control natural del balón.', price: 259.99, releaseDate: '2024-03-05', inStock: true, stock: 6, size: 44, surface: 'FG' },
+  { name: 'X Crazyfast Elite', brand: 'Adidas', color: 'Lima', description: 'Bota ultraligera para jugadores verticales y de desborde.', price: 249.99, releaseDate: '2023-07-02', inStock: true, stock: 4, size: 43, surface: 'AG' },
+  { name: 'Future 7 Ultimate', brand: 'Puma', color: 'Amarillo', description: 'Ajuste adaptable y estabilidad para regate en espacios reducidos.', price: 239.99, releaseDate: '2024-01-18', inStock: true, stock: 7, size: 42, surface: 'FG' },
+  { name: 'Ultra 5 Ultimate', brand: 'Puma', color: 'Azul marino', description: 'Modelo de velocidad Puma con placa reactiva para salida rápida.', price: 249.99, releaseDate: '2024-07-09', inStock: true, stock: 8, size: 41, surface: 'FG' },
+  { name: 'King Ultimate', brand: 'Puma', color: 'Blanco', description: 'Bota de toque clásico con gran estabilidad en apoyos laterales.', price: 229.99, releaseDate: '2023-05-21', inStock: true, stock: 3, size: 42, surface: 'AG' },
+  { name: 'Morelia Neo IV Beta', brand: 'Mizuno', color: 'Negro', description: 'Referencia japonesa por su ajuste premium y ligereza excepcional.', price: 299.99, releaseDate: '2023-10-11', inStock: true, stock: 10, size: 42, surface: 'FG' },
+  { name: 'Alpha Elite', brand: 'Mizuno', color: 'Turquesa', description: 'Bota rápida con construcción ligera y sujeción firme en sprint.', price: 279.99, releaseDate: '2024-01-09', inStock: true, stock: 11, size: 41, surface: 'FG' },
+  { name: 'Furon v7 Pro', brand: 'New Balance', color: 'Rojo', description: 'Pensada para golpeo seco y aceleración en últimos metros.', price: 179.99, releaseDate: '2023-04-17', inStock: true, stock: 9, size: 40, surface: 'FG' },
+  { name: 'Tekela v4 Pro', brand: 'New Balance', color: 'Blanco', description: 'Control y comodidad para mediocampistas y extremos asociativos.', price: 169.99, releaseDate: '2023-11-16', inStock: true, stock: 14, size: 42, surface: 'AG' },
+  { name: 'Alpha II Elite', brand: 'Mizuno', color: 'Plateado', description: 'Nueva generación enfocada en ligereza y tracción agresiva.', price: 299.99, releaseDate: '2024-10-03', inStock: true, stock: 18, size: 43, surface: 'FG' },
+  { name: 'Propulsion Cup', brand: 'Joma', color: 'Verde', description: 'Modelo resistente para césped artificial y uso intensivo semanal.', price: 119.99, releaseDate: '2022-01-13', inStock: true, stock: 15, size: 41, surface: 'AG' },
+  { name: 'Brasil Elite Veloce', brand: 'Diadora', color: 'Negro', description: 'Inspiración clásica italiana con estructura estable y cómoda.', price: 159.99, releaseDate: '2021-11-22', inStock: true, stock: 5, size: 44, surface: 'FG' },
+  { name: 'Lunar Gato II', brand: 'Nike', color: 'Blanco', description: 'Modelo de fútbol sala con amortiguación reactiva y gran grip.', price: 109.99, releaseDate: '2020-09-30', inStock: true, stock: 13, size: 42, surface: 'IC' },
+  { name: 'Top Flex Rebound', brand: 'Joma', color: 'Azul', description: 'Zapatilla sala muy usada por su comodidad y tracción en pista.', price: 94.99, releaseDate: '2023-04-04', inStock: true, stock: 12, size: 40, surface: 'IC' },
+  { name: 'Gresca', brand: 'Munich', color: 'Lima', description: 'Clásico de fútbol sala con gran durabilidad y toque seguro.', price: 99.99, releaseDate: '2024-04-02', inStock: true, stock: 8, size: 43, surface: 'IC' }
+];
+
+module.exports = bootsData;
