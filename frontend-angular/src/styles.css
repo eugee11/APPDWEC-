@@ -180,6 +180,11 @@ body {
 	box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
 }
 
+.detail-value {
+	color: #111827;
+	font-weight: 500;
+}
+
 .filter-panel .form-control,
 .filter-panel .form-select {
 	background: #e5e7eb;

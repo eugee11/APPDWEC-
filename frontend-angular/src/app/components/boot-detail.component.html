@@ -9,16 +9,16 @@
 <div *ngIf="boot" class="card">
   <div class="card-header bg-dark text-white">Detalle de la bota</div>
   <div class="card-body row g-3">
-    <div class="col-md-6"><strong>Modelo:</strong> {{ boot.name }}</div>
-    <div class="col-md-6"><strong>Marca:</strong> {{ boot.brand }}</div>
-    <div class="col-md-6"><strong>Color:</strong> {{ boot.color }}</div>
-    <div class="col-md-6"><strong>Talla:</strong> {{ boot.size }}</div>
-    <div class="col-md-6"><strong>Precio:</strong> {{ boot.price | currency : 'EUR' : 'symbol' : '1.2-2' : 'es-ES' }}</div>
-    <div class="col-md-6"><strong>Superficie:</strong> {{ getSurfaceLabel(boot.surface) }}</div>
-    <div class="col-md-6"><strong>Stock:</strong> {{ boot.stock }}</div>
-    <div class="col-md-6"><strong>Disponible:</strong> {{ boot.inStock ? 'Sí' : 'No' }}</div>
-    <div class="col-12"><strong>Descripción:</strong> {{ boot.description }}</div>
-    <div class="col-md-6"><strong>Lanzamiento:</strong> {{ boot.releaseDate | date : 'dd/MM/yyyy' }}</div>
+    <div class="col-md-6"><strong>Modelo:</strong> <span class="detail-value">{{ boot.name || 'No indicado' }}</span></div>
+    <div class="col-md-6"><strong>Marca:</strong> <span class="detail-value">{{ boot.brand || 'No indicado' }}</span></div>
+    <div class="col-md-6"><strong>Color:</strong> <span class="detail-value">{{ boot.color || 'No indicado' }}</span></div>
+    <div class="col-md-6"><strong>Talla:</strong> <span class="detail-value">{{ boot.size || 'No indicada' }}</span></div>
+    <div class="col-md-6"><strong>Precio:</strong> <span class="detail-value">{{ formatPrice(boot.price) }}</span></div>
+    <div class="col-md-6"><strong>Superficie:</strong> <span class="detail-value">{{ getSurfaceLabel(boot.surface || 'FG') }}</span></div>
+    <div class="col-md-6"><strong>Stock:</strong> <span class="detail-value">{{ boot.stock }}</span></div>
+    <div class="col-md-6"><strong>Disponible:</strong> <span class="detail-value">{{ boot.inStock ? 'Sí' : 'No' }}</span></div>
+    <div class="col-12"><strong>Descripción:</strong> <span class="detail-value">{{ boot.description || 'Sin descripción' }}</span></div>
+    <div class="col-md-6"><strong>Lanzamiento:</strong> <span class="detail-value">{{ formatDate(boot.releaseDate) }}</span></div>
   </div>
   <div class="card-footer d-flex gap-2">
     <a class="btn btn-warning" [routerLink]="['/boots/edit', boot._id]">Editar</a>

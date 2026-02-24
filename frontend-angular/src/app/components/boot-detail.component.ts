@@ -45,4 +45,16 @@ export class BootDetailComponent implements OnInit {
 
     return labels[surface] || surface;
   }
+
+  formatPrice(value: number | undefined): string {
+    const amount = Number(value ?? 0);
+    return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(amount);
+  }
+
+  formatDate(value: string | undefined): string {
+    if (!value) return 'No indicado';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return 'No indicado';
+    return new Intl.DateTimeFormat('es-ES').format(date);
+  }
 }
