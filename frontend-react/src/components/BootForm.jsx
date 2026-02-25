@@ -129,7 +129,6 @@ function BootForm() {
                   <select className="form-select" name="surface" value={form.surface} onChange={onChange}>
                     <option value="FG">Césped natural (FG)</option>
                     <option value="AG">Césped artificial (AG)</option>
-                    <option value="TF">Turf / Moqueta (TF)</option>
                     <option value="IC">Interior / Sala (IC)</option>
                   </select>
                 </div>
