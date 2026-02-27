@@ -200,9 +200,6 @@ npm run dev
 ---
 
 ## 12) URLs de despliegue (rellenar cuando publiques)
-- URL API desplegada: `PENDIENTE`  
-  Ejemplo: `https://api-botas.onrender.com`
-- URL Frontend Angular desplegado: `PENDIENTE`  
-  Ejemplo: `https://tienda-botas-angular.netlify.app`
-- URL Frontend React desplegado: `PENDIENTE`  
-  Ejemplo: `https://tienda-botas-react.netlify.app`
+API: https://appdwec-api.vercel.app
+Frontend Angular: https://appdwec-angular.vercel.app
+Frontend React: https://appdwec-react.vercel.app
